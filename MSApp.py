@@ -1,24 +1,13 @@
 
-
-import folium
-import geopandas            as gpd
-import json
 import matplotlib.pyplot    as plt
 import numpy                as np
 import pandas               as pd
-import pandas_profiling     as pp
 import plotly.express       as px
 import plotly.graph_objects as go
 import seaborn              as sns
 import streamlit            as st
 
-from branca.colormap        import linear
-from datetime               import datetime
-from folium                 import plugins
-from folium.features        import ColorLine
-from folium.plugins         import StripePattern
 from plotly.subplots        import make_subplots
-from urllib.request         import urlopen
 
 MSData = pd.read_csv("FinalMS.csv")
 MSData["City"] = MSData["City"].str.strip()
